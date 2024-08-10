@@ -3,10 +3,12 @@ import js from "@eslint/js";
 import tsESlint from "typescript-eslint";
 import pluginVue from "eslint-plugin-vue";
 
+import babelParser from "@babel/eslint-parser";
+
 export default [
 	// GLOBAL IGNORES
 	{
-		ignores: ["dist/*"],
+		ignores: ["**/dist/*"],
 	},
 	// FILES TO LINT
 	{
@@ -21,17 +23,26 @@ export default [
 				...globals.node,
 				...globals.es2022,
 			},
-			parser:' espree',
 		},
 		linterOptions: {
 			noInlineConfig: true,
-			reportUnusedDisableDirectives: 'warn',
+			reportUnusedDisableDirectives: 'error',
 		},
 	},
 	{
 		name: 'JS',
 		files: ["**/*.{js,mjs,cjs,ts,vue}"],
-		rules: 	js.configs.recommended.rules
+		rules: js.configs.recommended.rules,
+		languageOptions: {
+			parser: babelParser
+		}
+	},
+	{
+		name: 'TS',
+		files: ["**/*.ts"],
+		languageOptions: {
+			parser: tsESlint.parser
+		}
 	},
 
 	...tsESlint.configs.recommended,

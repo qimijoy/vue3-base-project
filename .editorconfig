@@ -13,6 +13,5 @@ end_of_line = lf
 indent_style = space
 indent_size = 2
 
-# Строки в батнике должны иметь перенос строки в стиле Windows (crlf), иначе возможны спецэффекты
 [*.bat]
 end_of_line = crlf
