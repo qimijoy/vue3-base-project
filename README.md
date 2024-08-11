@@ -2,9 +2,6 @@
 
 Base Vue3 + Vite + TS + Vue-Router + Pinia template.
 
-
-
-
 ## Project Setup
 
 ```sh
@@ -23,7 +20,7 @@ npm run dev
 npm run build
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+### Lint with ESLint
 
 ```sh
 npm run lint
