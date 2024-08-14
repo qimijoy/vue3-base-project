@@ -1,6 +1,10 @@
 import globals from 'globals';
+
 import js from '@eslint/js';
+import jsdoc from 'eslint-plugin-jsdoc';
+
 import tsESlint from 'typescript-eslint';
+
 import pluginVue from 'eslint-plugin-vue';
 
 import babelParser from '@babel/eslint-parser';
@@ -31,10 +35,16 @@ export default [
 			reportUnusedDisableDirectives: 'error',
 		},
 	},
+
+	js.configs.recommended,
+	jsdoc.configs['flat/recommended'],
+	jsdoc.configs['flat/recommended-typescript'],
 	{
 		name: 'JS',
 		files: ['**/*.{js,mjs,cjs,ts,vue}'],
-		rules: js.configs.recommended.rules,
+		plugins: {
+			jsdoc,
+		},
 		languageOptions: {
 			parser: babelParser,
 		},
@@ -42,6 +52,9 @@ export default [
 	{
 		name: 'TS',
 		files: ['**/*.ts'],
+		plugins: {
+			jsdoc,
+		},
 		languageOptions: {
 			parser: tsESlint.parser,
 		},
@@ -49,7 +62,8 @@ export default [
 
 	...tsESlint.configs.recommended,
 	...pluginVue.configs['flat/essential'],
-
+	...pluginVue.configs['flat/strongly-recommended'],
+	...pluginVue.configs['flat/recommended'],
 	{
 		name: 'Vue',
 		files: ['**/*.vue'],

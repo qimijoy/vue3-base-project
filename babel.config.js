@@ -1,3 +1,9 @@
+/**
+ * Babel configuration function
+ * @param api - The api object exposes everything Babel itself exposes from its index module,
+ * along with config-file specific APIs
+ * @returns [presets, plugins]
+ */
 export default function primaryConfig(api) {
 	api.cache(true);
 
