@@ -15,6 +15,7 @@ export default function primaryConfig(api) {
 				corejs: '3.38',
 			},
 		],
+		'@babel/preset-typescript',
 	];
 
 	const plugins = [];
