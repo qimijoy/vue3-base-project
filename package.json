@@ -10,7 +10,8 @@
     "dev": "vite",
     "build": "vue-tsc & vite build",
     "preview": "vite preview",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "prepare": "npx husky"
   },
   "dependencies": {
     "vue": "3.4.37"
@@ -34,6 +35,7 @@
     "eslint-plugin-prettier": "5.2.1",
     "eslint-plugin-vue": "9.27.0",
     "globals": "15.9.0",
+    "lint-staged": "15.2.9",
     "typescript": "5.5.4",
     "typescript-eslint": "8.1.0",
     "vite": "5.4.0",

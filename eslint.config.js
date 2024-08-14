@@ -48,6 +48,10 @@ export default [
 		languageOptions: {
 			parser: babelParser,
 		},
+		rules: {
+			...js.configs.recommended.rules,
+			...jsdoc.configs['flat/recommended'].rules,
+		},
 	},
 	{
 		name: 'TS',
@@ -57,6 +61,9 @@ export default [
 		},
 		languageOptions: {
 			parser: tsESlint.parser,
+		},
+		rules: {
+			...jsdoc.configs['flat/recommended-typescript'].rules,
 		},
 	},
 

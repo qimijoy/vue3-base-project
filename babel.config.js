@@ -4,9 +4,7 @@
  * along with config-file specific APIs
  * @returns [presets, plugins]
  */
-export default function primaryConfig(api) {
-	api.cache(true);
-
+export default function primaryConfig() {
 	const presets = [
 		[
 			'@babel/preset-env',
