@@ -12,16 +12,15 @@
 </template>
 
 <script setup lang="ts">
-import type { Ref } from 'vue';
+	import type { Ref } from 'vue';
 
-import { ref } from 'vue'
+	import { ref } from 'vue';
 
-const count: Ref<number> = ref(0);
+	const count: Ref<number> = ref(0);
 
-const onClickHandler = () => {
-	count.value++;
-}
-
+	const onClickHandler = () => {
+		count.value++;
+	};
 </script>
 
 <style scoped></style>

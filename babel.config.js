@@ -3,11 +3,12 @@ export default function primaryConfig(api) {
 
 	const presets = [
 		[
-			"@babel/preset-env", {
+			'@babel/preset-env',
+			{
 				useBuiltIns: 'usage',
-				corejs: "3.38"
-			}
-		]
+				corejs: '3.38',
+			},
+		],
 	];
 
 	const plugins = [];
@@ -15,5 +16,5 @@ export default function primaryConfig(api) {
 	return {
 		presets,
 		plugins,
-	}
+	};
 }

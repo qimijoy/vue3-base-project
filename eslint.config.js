@@ -1,18 +1,20 @@
-import globals from "globals";
-import js from "@eslint/js";
-import tsESlint from "typescript-eslint";
-import pluginVue from "eslint-plugin-vue";
+import globals from 'globals';
+import js from '@eslint/js';
+import tsESlint from 'typescript-eslint';
+import pluginVue from 'eslint-plugin-vue';
 
-import babelParser from "@babel/eslint-parser";
+import babelParser from '@babel/eslint-parser';
+
+import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 
 export default [
 	// GLOBAL IGNORES
 	{
-		ignores: ["**/dist/*"],
+		ignores: ['**/dist/*'],
 	},
 	// FILES TO LINT
 	{
-		files: ["**/*.{js,mjs,cjs,ts,vue}"],
+		files: ['**/*.{js,mjs,cjs,ts,vue}'],
 	},
 	// GLOBAL LANGUAGE & LINTER SETTINGS
 	{
@@ -31,30 +33,32 @@ export default [
 	},
 	{
 		name: 'JS',
-		files: ["**/*.{js,mjs,cjs,ts,vue}"],
+		files: ['**/*.{js,mjs,cjs,ts,vue}'],
 		rules: js.configs.recommended.rules,
 		languageOptions: {
-			parser: babelParser
-		}
+			parser: babelParser,
+		},
 	},
 	{
 		name: 'TS',
-		files: ["**/*.ts"],
+		files: ['**/*.ts'],
 		languageOptions: {
-			parser: tsESlint.parser
-		}
+			parser: tsESlint.parser,
+		},
 	},
 
 	...tsESlint.configs.recommended,
-	...pluginVue.configs["flat/essential"],
+	...pluginVue.configs['flat/essential'],
 
 	{
 		name: 'Vue',
-		files: ["**/*.vue"],
+		files: ['**/*.vue'],
 		languageOptions: {
 			parserOptions: {
-				parser: tsESlint.parser
-			}
-		}
+				parser: tsESlint.parser,
+			},
+		},
 	},
+
+	eslintPluginPrettierRecommended,
 ];
