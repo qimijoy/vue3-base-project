@@ -53,6 +53,8 @@ export default [
 			...jsdoc.configs['flat/recommended'].rules,
 		},
 	},
+
+	...tsESlint.configs.recommended,
 	{
 		name: 'TS',
 		files: ['**/*.ts'],
@@ -67,16 +69,13 @@ export default [
 		},
 	},
 
-	...tsESlint.configs.recommended,
-	...pluginVue.configs['flat/essential'],
-	...pluginVue.configs['flat/strongly-recommended'],
 	...pluginVue.configs['flat/recommended'],
 	{
 		name: 'Vue',
 		files: ['**/*.vue'],
 		languageOptions: {
 			parserOptions: {
-				parser: tsESlint.parser,
+				parser: '@typescript-eslint/parser',
 			},
 		},
 	},

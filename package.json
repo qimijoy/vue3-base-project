@@ -14,7 +14,7 @@
     "prepare": "npx husky"
   },
   "dependencies": {
-    "vue": "3.4.37"
+    "vue": "3.4.38"
   },
   "devDependencies": {
     "@babel/core": "7.25.2",
@@ -31,14 +31,14 @@
     "core-js": "3.38.0",
     "eslint": "9.9.0",
     "eslint-config-prettier": "9.1.0",
-    "eslint-plugin-jsdoc": "50.2.1",
+    "eslint-plugin-jsdoc": "50.2.2",
     "eslint-plugin-prettier": "5.2.1",
     "eslint-plugin-vue": "9.27.0",
     "globals": "15.9.0",
     "lint-staged": "15.2.9",
     "typescript": "5.5.4",
     "typescript-eslint": "8.1.0",
-    "vite": "5.4.0",
+    "vite": "5.4.1",
     "vite-plugin-babel": "1.2.0",
     "vue-tsc": "2.0.29"
   }
