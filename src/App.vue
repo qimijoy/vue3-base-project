@@ -22,5 +22,3 @@
 		count.value++;
 	};
 </script>
-
-<style scoped></style>
