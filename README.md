@@ -6,7 +6,6 @@ Base Vue3 + Vite + TS + Vue-Router + Pinia template.
 
 ```sh
 npm ci
-npm run prepare
 ```
 
 ### Compile and Hot-Reload for Development
@@ -25,4 +24,10 @@ npm run build
 
 ```sh
 npm run lint
+```
+
+### Deploy to GitHub Pages
+
+```sh
+npm run deploy
 ```

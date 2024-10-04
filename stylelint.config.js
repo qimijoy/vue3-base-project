@@ -32,6 +32,10 @@ export default {
 			customSyntax: 'postcss-less',
 		},
 		{
+			files: ['**/*.scss'],
+			customSyntax: 'postcss-scss',
+		},
+		{
 			files: ['**/*.vue'],
 			extends: ['stylelint-config-standard-vue'],
 		},

@@ -1,4 +1,4 @@
 export default {
-	'*.{js,vue}': ['npm run eslint'],
-	'*.{css,less,sass,vue}': ['npm run stylelint'],
+	'*.{js,ts,vue}': ['eslint'],
+	'*.{css,less,sass,vue}': ['stylelint'],
 };
