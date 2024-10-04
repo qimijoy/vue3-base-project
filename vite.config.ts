@@ -3,9 +3,11 @@ import { fileURLToPath, URL } from 'node:url';
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 
+import { basePath } from './src/constants/paths.constant';
+
 export default defineConfig({
 	plugins: [vue()],
-	base: process.env.NODE_ENV === 'production' ? '/vue3-base-project/' : '/',
+	base: basePath,
 	resolve: {
 		alias: {
 			'@': fileURLToPath(new URL('./src', import.meta.url)),
